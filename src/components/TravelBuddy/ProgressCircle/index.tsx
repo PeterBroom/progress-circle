@@ -7,6 +7,7 @@ import '../style.css';
 
 export const ProgressCircle = (props) => {
   const { rotate, strokeColor, waitFor, show } = props;
+  console.log('waitFor', waitFor);
   const [reveal, setReveal] = useState(false);
   useEffect(() => {
     if (show === true) {

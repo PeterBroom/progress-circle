@@ -42,7 +42,7 @@ export default function App() {
   return (
     <div>
       <h1>Circular progress bar</h1>
-      <TravelBuddy />
+      <TravelBuddy schema={schema} />
     </div>
   );
 }
