@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
+import '../style.css';
+
 export const ProgressCircle = (props) => {
   const { rotate, strokeColor, waitFor, show } = props;
   const [reveal, setReveal] = useState(false);
@@ -17,11 +19,11 @@ export const ProgressCircle = (props) => {
   console.log(waitFor);
   const percents = 8;
   const stroke = strokeColor;
-  const size = 500;
+  const size = 400;
   const strokeWidth = 12;
   const emptyStroke = '#999';
   const emptyStrokeOpacity = 0.25;
-  const duration = 1;
+  const duration = 0.6;
   const delay = 0.5;
   const radius = 45;
   const circumference = Math.ceil(2 * Math.PI * radius);

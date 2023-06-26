@@ -1,0 +1,9 @@
+.travelBuddyContainer {
+  position: relative;
+  height: 400px;
+  width: 400px;
+}
+
+.progressCircle {
+  display: inline-block;
+}
