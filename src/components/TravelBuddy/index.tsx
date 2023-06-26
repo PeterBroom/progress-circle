@@ -11,15 +11,12 @@ export const TravelBuddy = (props) => {
       {schema.map((progress, index) => {
         const duration = 650 * index;
         return (
-          <>
-            <p>{index}</p>
-            <ProgressCircle
-              rotate={51.5 * index}
-              strokeColor="#1879ca"
-              waitFor={duration}
-              show={customerStaus > index}
-            />
-          </>
+          <ProgressCircle
+            rotate={51.5 * index}
+            strokeColor="#1879ca"
+            waitFor={duration}
+            show={customerStaus > index}
+          />
         );
       })}
     </motion.div>
