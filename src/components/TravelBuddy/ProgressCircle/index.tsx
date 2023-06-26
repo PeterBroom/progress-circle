@@ -7,7 +7,6 @@ import '../style.css';
 
 export const ProgressCircle = (props) => {
   const { rotate, strokeColor, waitFor, show } = props;
-  console.log('waitFor', waitFor);
   const [reveal, setReveal] = useState(false);
   useEffect(() => {
     if (show === true) {
@@ -17,7 +16,6 @@ export const ProgressCircle = (props) => {
     }
   }, []);
 
-  console.log(waitFor);
   const percents = 8;
   const stroke = strokeColor;
   const size = 400;
@@ -68,7 +66,7 @@ export const ProgressCircle = (props) => {
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}
-        stroke-linecap="round"
+        strokeLinecap="round"
         style={{
           position: 'relative',
           transform: 'rotate(-90deg)',
@@ -93,7 +91,7 @@ export const ProgressCircle = (props) => {
         viewBox="0 0 100 100"
         width={size}
         height={size}
-        stroke-linecap="round"
+        strokeLinecap="round"
         style={{
           position: 'absolute',
           transform: 'rotate(-90deg)',
