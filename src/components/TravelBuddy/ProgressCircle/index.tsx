@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import '../../../style.css';
 
 import { motion } from 'framer-motion';
 
