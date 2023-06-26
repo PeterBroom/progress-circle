@@ -2,22 +2,11 @@ import * as React from 'react';
 import { ProgressCircle } from './ProgressCircle';
 import { motion } from 'framer-motion';
 
-const staggerVariant = {
-  open: {
-    transition: {
-      delay: 7,
-      duration: 0.2,
-      when: 'beforeChildren',
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const customerStaus = 8;
 
 export const TravelBuddy = () => {
   return (
-    <motion.div className="travelBuddyContainer" variants={staggerVariant}>
+    <motion.div className="travelBuddyContainer">
       <ProgressCircle
         rotate={2}
         strokeColor="#1879ca"
