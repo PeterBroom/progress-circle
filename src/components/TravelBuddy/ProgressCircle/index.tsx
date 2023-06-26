@@ -4,12 +4,8 @@ import { IntersectionContext } from '../intersection-observer';
 
 import { motion } from 'framer-motion';
 
-function rand(min = 0, max = 100) {
-  return Math.floor(Math.random() * (+max - +min)) + +min;
-}
-
 export const ProgressCircle = ({}) => {
-  const percents = rand();
+  const percents = 14;
   const stroke = '#1879ca';
   const size = 200;
   const strokeWidth = 6;
@@ -58,27 +54,6 @@ export const ProgressCircle = ({}) => {
           strokeWidth={strokeWidth}
           stroke={emptyStroke}
           strokeOpacity={emptyStrokeOpacity}
-          stroke-dasharray="1% 24%"
-          stroke-dashoffset="1"
-          fill="transparent"
-        />
-      </svg>
-
-      <svg
-        viewBox="0 0 100 100"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-      >
-        <circle
-          cx="50"
-          cy="50"
-          r={radius}
-          className="circle"
-          strokeWidth={strokeWidth}
-          stroke={emptyStroke}
-          strokeOpacity={emptyStrokeOpacity}
           fill="transparent"
         />
       </svg>
@@ -86,6 +61,7 @@ export const ProgressCircle = ({}) => {
         viewBox="0 0 100 100"
         width={size}
         height={size}
+        stroke-linecap="round"
         style={{
           position: 'absolute',
           transform: 'rotate(-90deg)',
