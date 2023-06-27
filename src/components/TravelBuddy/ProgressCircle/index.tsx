@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import '../style.css';
 
 export const ProgressCircle = (props) => {
-  const { rotate, strokeColor, waitFor, show } = props;
+  const { rotate, waitFor, show, position, index } = props;
   const [reveal, setReveal] = useState(false);
   useEffect(() => {
     if (show === true) {
@@ -17,10 +17,10 @@ export const ProgressCircle = (props) => {
   }, []);
 
   const percents = 8;
-  const stroke = strokeColor;
+  const stroke = position === index ? '#003B95' : '#3DAEFF';
   const size = 400;
   const strokeWidth = 12;
-  const emptyStroke = '#999';
+  const emptyStroke = '#E5E5E5';
   const emptyStrokeOpacity = 0.25;
   const duration = 0.6;
   const delay = 0.5;
